@@ -11,6 +11,7 @@ import {
 
 export default async function Page() {
   console.log("@is it being excuted?");
+  new Promise((res, rej) => setTimeout(res, 5000));
   const revenue = await fetchRevenue();
   console.log("@@what is revenue", revenue);
   const latestInvoices = await fetchLatestInvoices();
